@@ -4,6 +4,6 @@
     )
 }}
 
-select "book_ref", "book_date", "total_amount"
+select  book_ref, book_date, total_amount
 from 
     {{ ref('stg_flight__bookings') }}
