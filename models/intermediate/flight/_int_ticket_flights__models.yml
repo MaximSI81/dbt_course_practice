@@ -1,0 +1,24 @@
+models:
+  - name: fct_ticket_flights
+    description: Билеты
+    docs:
+      show: true
+      node_color: green
+    meta:
+      onwer: "safonovmio@gmail.com"
+    config:
+      contract: {enforced: true}
+      columns:
+      - name: ticket_no
+        data_type: bpchar(3)
+        constraints:
+          - type: not_null
+      - name: flight_id
+        data_type: int(4)
+      - name: fare_conditions
+        data_type: varchar(10)
+      - name: amount
+        data_type: numeric(10, 2)
+        constraints:
+          - type: check
+            expression: "amount >= 0"
