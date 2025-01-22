@@ -8,13 +8,13 @@ models:
       onwer: "safonovmio@gmail.com"
     config:
       contract: {enforced: true}
-      columns:
+    columns:
       - name: ticket_no
-        data_type: bpchar(3)
+        data_type: bpchar(13)
         constraints:
           - type: not_null
       - name: flight_id
-        data_type: int(4)
+        data_type: int4
       - name: fare_conditions
         data_type: varchar(10)
       - name: amount
