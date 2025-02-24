@@ -1,0 +1,14 @@
+seeds:
+  - name: city_region
+    description: Регионы и города
+    config:
+      column_types:
+        city: varchar(30)
+        region: varchar(50)
+    columns:
+      - name: city
+        tests: 
+          - not_null
+          - umique
+
+
